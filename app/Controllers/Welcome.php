@@ -1,10 +1,16 @@
 <?php 
 namespace App\Controllers;
 
-class Welcome
+class Welcome extends Controller
 {
-    public function index($nama = 'Agus')
+    public function index()
     {
-        echo 'Halo '.$nama;
+    	$data['title'] = 'Halo';
+    	$this->view('welcome', $data);
+    }
+
+    public function hello($name = "Agus Supriyatna")
+    {
+    	echo "Hello $name";
     }
 }
