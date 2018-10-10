@@ -1,0 +1,16 @@
+{
+    "name": "agus/simple-framework",
+    "description": "Just a Simple Framework PHP",
+    "authors": [
+        {
+            "name": "Agus Supriyatna",
+            "email": "aguzsupriyatna7@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+            "App\\": "app"
+    	}
+    }
+}

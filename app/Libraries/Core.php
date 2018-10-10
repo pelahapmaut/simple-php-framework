@@ -1,4 +1,6 @@
-<?php
+<?php 
+namespace App\Libraries;
+
 /**
  * App Core Class
  * Create URL & load core controllers
@@ -41,11 +43,9 @@ class Core
 	        }
     	}
 
-    	// require the controller
-        require_once '../app/controllers/'.$this->currentController.'.php';
-
         // Instantiate the controller
-        $this->currentController = new $this->currentController;
+        $currentController = 'App\Controllers\\'.$this->currentController;
+        $this->currentController = new $currentController;
         unset($this->url[0]);
     }
 
